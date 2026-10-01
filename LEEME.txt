@@ -1,0 +1,27 @@
+EFESIOS APP — PROYECTO APK ANDROID
+=================================
+
+Esta carpeta contiene la aplicación Android nativa que envuelve la
+aplicación completa de Efesios para funcionar SIN INTERNET.
+
+CONTENIDO VALIDADO:
+- Capítulo 1: 23 versículos
+- Capítulo 2: 22 versículos
+- Capítulo 3: 21 versículos
+- Capítulo 4: 32 versículos
+- Capítulo 5: 33 versículos
+- Capítulo 6: 24 versículos
+TOTAL: 155 versículos.
+
+Nombre de la app: Efesios
+Package: com.mero.efesios
+Android mínimo: Android 7.0 (API 24)
+Modo: totalmente offline.
+
+PARA GENERAR EL APK:
+Opción A: abrir este proyecto en Android Studio y Build > Build APK(s).
+Opción B: subir todo el proyecto a GitHub. El workflow incluido
+.github/workflows/build-apk.yml genera automáticamente app-debug.apk.
+
+El APK de depuración se instala directamente en un Android habilitando
+'Instalar aplicaciones desconocidas' para el navegador o gestor de archivos.

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#123a63">
+  <meta name="description" content="Comentario exegético de Efesios organizado por capítulo y versículo para lectura personal.">
+  <title>Efesios — Comentario Exegético</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="icons/icon-192.png">
+</head>
+<body>
+<header>
+  <div>
+    <div class="eyebrow">ESTUDIO BÍBLICO · 6 CAPÍTULOS · 155 VERSÍCULOS</div>
+    <h1>Efesios</h1>
+    <div class="sub">Comentario exegético · lectura limpia</div>
+  </div>
+  <div class="header-actions">
+    <button id="install" class="install hidden" aria-label="Instalar aplicación">⬇</button>
+    <button id="theme" aria-label="Cambiar tema">◐</button>
+  </div>
+</header>
+
+<main>
+  <section class="card controls">
+    <div class="grid">
+      <label>Capítulo
+        <select id="chapter"></select>
+      </label>
+      <label>Versículo
+        <select id="verse"></select>
+      </label>
+    </div>
+    <div id="chapterInfo" class="chapter-info"></div>
+    <div class="search">
+      <input id="q" placeholder="Buscar 5:10, una palabra o una frase">
+      <button id="go">Buscar</button>
+    </div>
+    <div class="actions">
+      <button id="prev">← Anterior</button>
+      <button id="fav">☆ Favorito</button>
+      <button id="next">Siguiente →</button>
+    </div>
+    <div class="small-actions">
+      <button id="showFavs">★ Ver favoritos</button>
+      <button id="goLast">↩ Continuar lectura</button>
+    </div>
+  </section>
+
+  <section class="card reader">
+    <div class="ref" id="ref"></div>
+    <h2 id="heading"></h2>
+
+    <div id="greekWrap">
+      <h3>Texto griego y traducción</h3>
+      <pre id="greek"></pre>
+    </div>
+
+    <h3>Comentario exegético</h3>
+    <div id="commentary" class="prose"></div>
+
+    <div class="source-line" id="sourcePage"></div>
+
+    <details class="about-clean">
+      <summary>¿Qué se omitió en esta versión?</summary>
+      <p>Para facilitar la lectura se omitieron los cuadros técnicos de “Notas y análisis del texto griego”, la crítica textual, las lecturas alternativas y el análisis gramatical palabra por palabra. Se conserva el texto bíblico, el texto griego con su traducción y el comentario explicativo.</p>
+    </details>
+  </section>
+
+  <section class="card settings">
+    <div>
+      <b>Tamaño de letra</b>
+      <div class="fontBtns"><button id="minus">A−</button><button id="plus">A+</button></div>
+    </div>
+    <div>
+      <b>Lectura</b>
+      <div id="status">La aplicación guarda automáticamente dónde dejaste de leer.</div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  Uso personal · Comentario de Efesios · 6 capítulos · 155 versículos
+</footer>
+
+<div id="favModal" class="modal hidden" aria-hidden="true">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-card">
+    <button class="close" data-close>×</button>
+    <h2>Mis favoritos</h2>
+    <div id="favList"></div>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
