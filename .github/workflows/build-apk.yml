@@ -11,24 +11,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Descargar proyecto
+      - name: Checkout project
         uses: actions/checkout@v4
 
-      - name: Instalar Java
+      - name: Setup Java
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: '17'
 
-      - name: Instalar Gradle
+      - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.9'
 
-      - name: Crear APK
+      - name: Build APK
         run: gradle assembleDebug
 
-      - name: Guardar APK
+      - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: EFESIOS-APP-APK
